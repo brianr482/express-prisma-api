@@ -7,11 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
     "start": "node dist/index.js",
-    "server:dev": "nodemon src/index.ts"
+    "server:dev": "nodemon src/index.ts",
+    "db:seed": "npx prisma db seed"
   },
   "keywords": [],
   "author": "Brian Ramirez @brianr482",
   "license": "ISC",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.10.5",
@@ -21,6 +25,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.3.1",
     "@prisma/client": "^5.7.0",
     "dotenv": "^16.3.1",
     "express": "^4.18.2"
