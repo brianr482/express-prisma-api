@@ -5,7 +5,7 @@ const router: Router = Router();
 
 router
   .get('/', UserController.findAllWithTasks)
-  .get(':id', UserController.getById)
+  .get('/:id', UserController.getById)
   .post('/', UserController.create)
   .put('/:id', UserController.update)
   .delete('/:id', UserController.delete);

@@ -4,6 +4,8 @@ import Routes from './routes';
 
 const app: Express = express();
 
+app.use(express.urlencoded({ extended: true }));
+
 app.use(express.json());
 
 // User routes

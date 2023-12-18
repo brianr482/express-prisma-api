@@ -43,7 +43,7 @@ export class UserController {
     const filter: Prisma.UserWhereUniqueInput = {
       id: Number(req.params.id),
     };
-    const user = await prisma.user.findMany({
+    const user = await prisma.user.findUnique({
       where: filter
     });
 
